@@ -9,20 +9,24 @@
 
 </head>
 
+
+
+
 <body>
-    <!--  inizio header -->
+
+    <!-- Header -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand" href="#">Bool Factory</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav mx-auto mx-lg-0" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mx- auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Servizi</a>
@@ -34,108 +38,100 @@
                 </div>
             </div>
         </nav>
-
     </header>
-    <!-- fine header -->
 
-    <!-- inizio main -->
+    <!-- Main -->
     <main>
-        
-            <div class="container">
-                <div class="row">
-                    <form class="col-12 col-md-9">
-                        <h1 class="mt-3">Richiesta Preventivo</h1>
-                        <p>Compila il forum per richiedere un preventivo per i nostri servizi di sviluppo.</p>
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="Inputname" class="form-label">Name</label>
-                                <input type="name" class="form-control" id="Inputname" aria-describedby="nameHelp">
-                            </div>
+        <div class="container">
+            <div class="row">
+                <!-- Form Preventivo -->
+                <div class="col-12 col-md-9">
+                    <h1 class="mt-3">Richiesta Preventivo</h1>
+                    <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
 
-                            <div class="mb-3">
-                                <label for="Inputsurname" class="form-label">Surname</label>
-                                <input type="surname" class="form-control" id="Inputsurname"
-                                    aria-describedby="surnameHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="InputEmail" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
-                            </div>
-
-                            <h2>Titolo di lavoro</h2>
-
-                            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-                                <option selected>Seleziona il tipo di lavoro</option>
-                                <option value="1">Backed Development</option>
-                                <option value="2">Frontend Development</option>
-                                <option value="3">Project Analysis</option>
-                            </select>
-
-                            <div class="mb-3">
-                                <label for="Textarea" class="form-label">Textarea con bootstrap 5 </label>
-                                <textarea class="form-control" id="FormControlTextarea" rows="3"></textarea>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="InputPromocode" class="form-label">Codice promozionale (opzionale)</label>
-                                <input type="password" class="form-control" id="InputPromocode">
-                            </div>
-
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Accetto la Privacy Policy
-                                </label>
-                            </div>
-                            <div class="text-center text-md-start">
-                                <button type="submit" class="btn btn-primary">Calcola Preventivo</button>
-                            </div>
-
-                            <div class="col-12 col-md-8 mt-3 mt-md-0 text-center text-md-end" id="result"
-                                style="display: none;">
-                                <h4>Prezzo Finale: <span id="finalPrice">0</span> €</h4>
-                            </div>
-                        </form>
-                    <div class="col-12 col-md-3 mt-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="imag.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">I nostri contatti</h5>
-                                <p class="card-text">Se hai bisogno di aiuto puoi contattarci.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Help@boolfactory.test</li>
-                                <li class="list-group-item">+1122334455</li>
-                            </ul>
-                            <div class="card-body">
-                                <a href="#" class="help-link">Help desk</a>
-                            </div>
+                    <form id="preventivo">
+                        <div class="mb-3">
+                            <label for="InputName" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="InputName">
                         </div>
-                    </div>
 
+                        <div class="mb-3">
+                            <label for="InputSurname" class="form-label">Cognome</label>
+                            <input type="text" class="form-control" id="InputSurname">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="InputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="InputEmail">
+                        </div>
+
+                        <h2>Titolo di lavoro</h2>
+                        <select  class="form-select mb-3" aria-label="Seleziona il tipo di lavoro">
+                            <option value="">Seleziona il tipo di lavoro</option>
+                            <option id="Backend" value="">Backend Development</option>
+                            <option id="Frontend"  value="">Frontend Development</option>
+                            <option id="Project" value="">Project Analysis</option>
+                        </select>
+
+                        <div class="mb-3">
+                            <label for="FormControlTextarea" class="form-label">Textarea con bootstrap5</label>
+                            <textarea class="form-control" id="FormControlTextarea" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="InputPromocode" class="form-label">Codice promozionale (opzionale)</label>
+                            <input type="text" class="form-control" id="InputPromocode">
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Accetto la Privacy Policy
+                            </label>
+                        </div>
+
+                        <div class="text-center text-md-start mx-md-5">
+                            <button type="submit" class="btn btn-primary">Calcola Preventivo</button>
+                        </div>
+
+                        <div class="col-12 col-md-8 mt-3 text-center text-md-end" id="result" style="display: none;">
+                            <h4>Prezzo Finale: <span id="finalPrice">0</span> €</h4>
+                        </div>
+                    </form>
                 </div>
 
-
+                <!-- Contatti -->
+                <div class="col-12 col-md-3 mt-4">
+                    <div class="card">
+                        <img src="imag.png" class="card-img-top" alt="Immagine 300x200">
+                        <div class="card-body">
+                            <h5 class="card-title">I nostri contatti</h5>
+                            <p class="card-text">Se hai bisogno di aiuto puoi contattarci.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Help@boolfactory.test</li>
+                            <li class="list-group-item">+1122334455</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="help-link">Help desk</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        
-
-
+        </div>
     </main>
-    <!-- fine main -->
 
-    <!-- inizio footer -->
+    <!-- Footer -->
     <footer>
         <p class="bg-dark text-light text-center py-3 mt-4">© 2024 - Tutti i diritti riservati</p>
-
     </footer>
-    <!-- fine footer -->
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
     <script src="js/script.js"></script>
+
 </body>
+
 
 </html>
