@@ -53,24 +53,28 @@
                         <div class="mb-3">
                             <label for="InputName" class="form-label">Nome</label>
                             <input type="text" class="form-control" id="InputName">
+                            <div class="invalid-feedback" style="display: none;"></div>
                         </div>
 
                         <div class="mb-3">
                             <label for="InputSurname" class="form-label">Cognome</label>
                             <input type="text" class="form-control" id="InputSurname">
+                            <div class="invalid-feedback" style="display: none;"></div>
                         </div>
 
                         <div class="mb-3">
                             <label for="InputEmail" class="form-label">Email</label>
                             <input type="email" class="form-control" id="InputEmail">
+                            <div class="invalid-feedback" style="display: none;"></div>
                         </div>
 
-                        <h2>Titolo di lavoro</h2>
-                        <select class="form-select mb-3" id="servizio" >
+                        <label for="servizio" class="form-label">Tipo di lavoro</label>
+                        <select class="form-select mb-3" id="servizio">
                             <option value="">Seleziona il tipo di lavoro</option>
                             <option value="Backend">Backend Development</option>
                             <option value="Frontend">Frontend Development</option>
                             <option value="Project">Project Analysis</option>
+                            <div class="invalid-feedback" style="display: none;"></div>
                         </select>
 
 
@@ -84,12 +88,10 @@
                         <div class="mb-3">
                             <label for="InputPromocode" class="form-label">Codice promozionale (opzionale)</label>
                             <input type="text" class="form-control" id="InputPromocode">
-                            <div id="errorCodiceSconto" class="text-danger" style="display: none;">
-                                Codice sconto non valido! Verrà applicato il prezzo pieno.
-                            </div>
-    
+                            <div id="errorCodiceSconto" class="text-danger" style="display: none;"></div>
+
                         </div>
-                        
+
 
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
@@ -103,11 +105,13 @@
                                 <button type="submit" class="btn btn-primary">Calcola Preventivo</button>
                             </div>
 
-                            <div class="col-6 col-md-8 mt-3 text-center text-end d-md-block" id="result" style="display: none;">
-                                <h4>Prezzo Finale: <span id="finalPrice">0</span> €</h4>
+                            <div class="col-6 col-md-8 mt-3 text-center text-end d-md-block" id="result"
+                                style="display: none;">
+                                <div><strong>Prezzo Finale:</strong><span id="finalPrice"></span>
+                                    </div>
                             </div>
 
-                    
+
                         </div>
                     </form>
                 </div>
